@@ -5,15 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamilton Tamil Sangam</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
+    <script>
+        // script.js - Vanilla JS for basic interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            const galleryImages = document.querySelectorAll('.gallery-image');
+            galleryImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    alert('Image clicked! Implement lightbox modal here for full view.');
+                });
+            });
+        });
+    </script>
+   <style>
         /* Original styles with fixes for navbar visibility */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
+            color: #340202;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -30,6 +49,7 @@
             color: gold;
             font-size: clamp(24px, 5vw, 36px);
             text-align: left;
+            padding-left: 10px;
             margin-left: 15px;
             flex: 1;
         }
@@ -162,8 +182,10 @@
         /* Responsive styles */
         @media (max-width: 768px) {
             .header {
-                flex-direction: column;
-                align-items: flex-start;
+flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
             }
             .heading {
                 margin-left: 0;
@@ -228,7 +250,7 @@
 </head>
 <body>
     <header class="header">
-        <img src="images/HTS-Logo.png" width="3%" height="3%" alt="HTS Logo">
+        <img src="images/HTS-Logo.png" width="50px" height="50px" alt="HTS Logo">
         <h1 class="heading">Hamilton Tamil Sangam</h1>
     </header>
     <p>
@@ -277,7 +299,7 @@
         <section id="events" class="events">
             <h1>Upcoming Events</h1>
             <div>
-                <img src="images/Diwali_poster.jpg"  width="25%" alt="Diwali Event Poster" >
+                <img src="images/Diwali_poster.jpg"  width="50%" alt="Diwali Event Poster" >
             </div>
 
             <!-- <div class="event-card">
@@ -289,15 +311,11 @@
         </section>
 
         <section id="gallery" class="gallery">
-            <h1>Our Gallery</h1>
-            <p>See the best things we do - what's happening in our Hamilton Tamil Sangam.</p>
-            <div className="gallery-grid">
-                <img src="https://placeholder.com/image1" alt="Gallery Image 1" className="gallery-image">
-                <img src="https://placeholder.com/image2" alt="Gallery Image 2" className="gallery-image">
-                <img src="https://placeholder.com/image3" alt="Gallery Image 3" className="gallery-image">
-                <img src="https://placeholder.com/image4" alt="Gallery Image 4" className="gallery-image">
-                <img src="https://placeholder.com/image5" alt="Gallery Image 5" className="gallery-image">
-            </div>
+            <h1>Gallery</h1>
+            <p>Our 2025 Summer Event Pictures</p>
+            <div class="gallery-grid">
+    <iframe src="https://photos.google.com/share/AF1QipMNpGo4HSL3NfJOV4uBjCilBsp2uAJdGB9_dvT1SpmxzZK8kaDD7yoHncB5jSV-ug/memory/AF1QipNrL10xQupv-af-tZj_IsM9svGsDXkQfv71doZgYPRxE_blIBrNgPtme_07lirILQ?key=NDJzZ2lPSzJydEMtcVpJZ0hUdzNVbjdNVG42SG9n" width="100%" height="400" frameborder="0" referrerpolicy="no-referrer" allowfullscreen></iframe>
+</div>
         </section>
 
         <section id="blog" class="blog">
@@ -332,6 +350,5 @@
         <p>Contact: info@hamiltontamilsangam.ca | Hamilton, Ontario, Canada</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
