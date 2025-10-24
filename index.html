@@ -15,11 +15,17 @@
       position: fixed; top: 0; left: 0; right: 0; height: 90px; z-index: 1000;
       background: #800000; padding: 10px; display: flex; align-items: center; flex-wrap: wrap;
     }
-    .heading { color: gold; font-size: clamp(24px, 5vw, 36px); margin-left: 15px; flex: 1; }
+    .heading { color: gold; font-size: clamp(34px, 5vw, 36px); margin-left: 15px; flex: 1; }
     .navbar ul { list-style: none; display: flex; gap: 15px; margin: 0; }
     .navbar a { color: #ffd700; text-decoration: none; font-weight: bold; transition: color .3s; }
     .navbar a:hover { color: #ffd700; }
 
+    .logo {
+      max-width: 12%; /* Scales with viewport */
+      height: auto;
+      max-height: 60px; /* Caps logo size */
+      transition: transform 0.3s ease; /* Smooth scaling */
+    }
     /* MAIN CONTENT AREA (scrollable iframe) */
     .main-container {
       position: fixed; top: 90px; bottom: 60px; left: 0; right: 0; overflow: hidden;
@@ -57,7 +63,7 @@
 
   <!-- FIXED HEADER -->
   <header class="header">
-    <img src="images/HTS-Logo.png" width="75" height="75" alt="HTS Logo">
+    <img src="images/HTS-Logo.png" alt="HTS Logo" class="logo">
     <h1 class="heading">Hamilton Tamil Sangam</h1>
 
     <input type="checkbox" id="menu-toggle">
