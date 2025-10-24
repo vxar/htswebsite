@@ -1,0 +1,33 @@
+<section id="blog" style="
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ← Centers children horizontally */
+  text-align: center;      /* ← Centers inline text */
+  max-width: 1200px;
+  margin: 0 auto;          /* ← Centers the whole block if narrower than viewport */
+">
+<style>
+  * { color: #800000 !important; }
+  h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+  .gold, a.button, .gold-link { color: gold !important; }
+</style>
+  <h1>Blog</h1>
+  <article style="padding:15px; border-radius:8px; margin-bottom:20px; box-shadow:0 2px 4px rgba(0,0,0,.1); animation:slideUp .5s ease-out;">
+    <h2>Our Journey So Far</h2>
+    <p>Reflecting on 5 years of growth and community building at HTS.</p>
+    <div class="col-sm-6 col-lg-3">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PENSbvVx1mo?si=xtUKrFM65q0mcFBS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </article>
+  <article style="padding:15px; border-radius:8px; margin-bottom:20px; box-shadow:0 2px 4px rgba(0,0,0,.1); animation:slideUp .5s ease-out .2s both;">
+    <h2>Upcoming Cultural Events</h2>
+    <p>A sneak peek into our plans for the next year.</p>
+    <p>Kodai Kondattam 2026</p>
+  </article>
+</section>
+
+<style>
+  @keyframes slideUp { from {transform:translateY(50px); opacity:0} to {opacity:1} }
+</style>
